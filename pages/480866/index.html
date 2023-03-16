@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 沦陷">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="17.次重点, 沦陷">
+    <meta name="description" content="01.读写文件
+读写文件（python如何读取大文件）：https://www.cnblogs.com/xiaonq/p/7860309.html
+
+经典面试题：现在有一个5G的文件，用python写入另一个文件里
+
+read(): 指定读">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 沦陷</title>
+    <title>17.次重点 | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -279,12 +284,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">17.次重点</h1>
                 </div>
             </div>
         </div>
@@ -405,6 +410,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                python基础
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -412,7 +430,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-05
+                    2021-02-11
                 </div>
                 
 
@@ -421,14 +439,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    711
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -453,19 +471,67 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="01-读写文件"><a href="#01-读写文件" class="headerlink" title="01.读写文件"></a>01.读写文件</h2><ul>
+<li><p>读写文件（python如何读取大文件）：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaonq/p/7860309.html">https://www.cnblogs.com/xiaonq/p/7860309.html</a></p>
+</li>
+<li><p>经典面试题：现在有一个5G的文件，用python写入另一个文件里</p>
+<ul>
+<li>read(): 指定读取指定大小的文件（默认一次读取所有）</li>
+<li>readline(): 逐行读取，适合读大文件</li>
+<li>readlines(): 一次性读取所有文件， 将文件按行读取成列表</li>
+</ul>
+</li>
+<li><p>我们使用了一个 while 循环来读取文件内容，每次最多读取 8kb 大小</p>
+</li>
+<li><p>这样可以避免之前需要拼接一个巨大字符串的过程，把内存占用降低非常多。</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_big_file_v</span>(<span class="params">fname</span>):</span><br><span class="line">    block_size = <span class="number">1024</span> * <span class="number">8</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fname,encoding=<span class="string">&quot;utf8&quot;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            chunk = fp.read(block_size)</span><br><span class="line">            <span class="comment"># 当文件没有更多内容时，read 调用将会返回空字符串 &#x27;&#x27;</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> chunk:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="built_in">print</span>(chunk)</span><br><span class="line">path = <span class="string">r&#x27;C:\aaa\luting\edc-backend\tttt.py&#x27;</span></span><br><span class="line">read_big_file_v(path)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="02-字符编码"><a href="#02-字符编码" class="headerlink" title="02.字符编码"></a>02.字符编码</h2><ul>
+<li><p>各种编码由来</p>
+<ul>
+<li>ASCII       :  不支持中文（<strong>一个字母一个字节：a&#x2F;b&#x2F;c</strong>）</li>
+<li>GBK        :  是中国的中文字符，其包含了简体中文和繁体中文的字符</li>
+<li>Unicode :  万国编码（Unicode 包含GBK）</li>
+</ul>
+</li>
+<li><p>Unicode（<strong>每个字母需要用两个字节：a&#x2F;b&#x2F;c</strong>）</p>
+<ul>
+<li>存储所有字符串都用连个字节</li>
+<li>Unicode 是为了解决传统的字符编码方案的局限而产生的，它为每种语言中的每个字符设定了统一并且唯一的二进制编码</li>
+<li>规定所有的字符和符号最少由 16 位来表示（2个字节），即：2 **16 &#x3D; 65536</li>
+<li>这里还有个问题：使用的字节增加了，那么造成的直接影响就是使用的空间就直接翻倍了</li>
+</ul>
+</li>
+<li><p>Utf-8       : 可变长码, 是Unicode 的扩展集</p>
+<ul>
+<li><p>UTF-8编码：是对Unicode编码的压缩和优化，他不再使用最少使用2个字节，而是将所有的字符和符号进行分类</p>
+</li>
+<li><p>ascii码中的内容用1个字节保存、欧洲的字符用2个字节保存，东亚的字符用3个字节保存…</p>
+</li>
+<li><p><strong>存一个a字母用一个字节，存一个中文用三个字节</strong></p>
+</li>
+</ul>
+</li>
+<li><p>python2与python3的几个区别　</p>
+<ul>
+<li>Python2默认 编码方式为ASCII， Python3  默认编码方式为UTF-8（是Unicode 的扩展集）</li>
+<li>python2中字符串有str和unicode两种类型， python3 中字符串有str和字节(bytes) 两种类型</li>
+<li>python3中不再支持u中文的语法格式</li>
+</ul>
+</li>
+<li><p>python2和python3中编码转换</p>
+<ul>
+<li>在python3中字符串默认是unicode所以不需要decode()，直接encode成想要转换的编码如gb2312</li>
+<li>在python2中默认是ASCII编码，必须先转换成Unicode，Unicode 可以作为各种编码的转换的中转站</li>
+</ul>
+</li>
+</ul>
+<h2 id="03-常用模块"><a href="#03-常用模块" class="headerlink" title="03.常用模块"></a>03.常用模块</h2><ul>
+<li>（re）(paramiko、subprocess)：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaonq/p/7866925.html">https://www.cnblogs.com/xiaonq/p/7866925.html</a></li>
+</ul>
+<h2 id="04-python2与python3的区别"><a href="#04-python2与python3的区别" class="headerlink" title="04.python2与python3的区别"></a>04.python2与python3的区别</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaonq/p/8706111.html">https://www.cnblogs.com/xiaonq/p/8706111.html</a></p>
 
                 
             </div>
@@ -492,7 +558,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tsblog.cn/2022/03/05/hello-world/">https://tsblog.cn/2022/03/05/hello-world/</a>
+                    <a href="https://tsblog.cn/pages/480866/">https://tsblog.cn/pages/480866/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,18 +786,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/05/hello-world/">
+                <a href="/pages/a18e2b/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="16.高阶函数">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">16.高阶函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,18 +806,25 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            佟帅
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,13 +835,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pages/2270e1/">
+                <a href="/pages/d35123/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="12.深浅拷贝">
                         
-                        <span class="card-title">01.列表</span>
+                        <span class="card-title">12.深浅拷贝</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

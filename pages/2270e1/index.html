@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 沦陷">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="01.列表, 沦陷">
+    <meta name="description" content="01.列表常用方法1.1 append123#1. append用于在列表末尾追加新的对象a = [1,2,3]a.append(4)                          #the result ： [1, 2, 3, 4]
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 沦陷</title>
+    <title>01.列表 | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -279,12 +280,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">01.列表</h1>
                 </div>
             </div>
         </div>
@@ -405,6 +406,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                python基础
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -412,7 +426,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-05
+                    2021-02-11
                 </div>
                 
 
@@ -421,14 +435,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    801
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -453,19 +467,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="01-列表常用方法"><a href="#01-列表常用方法" class="headerlink" title="01.列表常用方法"></a>01.列表常用方法</h2><h3 id="1-1-append"><a href="#1-1-append" class="headerlink" title="1.1 append"></a>1.1 append</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1. append用于在列表末尾追加新的对象</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">a.append(<span class="number">4</span>)                          <span class="comment">#the result ： [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-count"><a href="#1-2-count" class="headerlink" title="1.2 count"></a>1.2 count</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#2. count方法统计某个元素在列表中出现的次数</span></span><br><span class="line">a = [<span class="string">&#x27;aa&#x27;</span>,<span class="string">&#x27;bb&#x27;</span>,<span class="string">&#x27;cc&#x27;</span>,<span class="string">&#x27;aa&#x27;</span>,<span class="string">&#x27;aa&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(a.count(<span class="string">&#x27;aa&#x27;</span>))                 <span class="comment">#the result ： 3</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-extend"><a href="#1-3-extend" class="headerlink" title="1.3 extend"></a>1.3 extend</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#3. extend方法可以在列表的末尾一次性追加另一个序列中的多个值</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">a.extend(b)                          <span class="comment">#the result ：[1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-index"><a href="#1-4-index" class="headerlink" title="1.4 index"></a>1.4 index</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#4. index函数用于从列表中找出某个值第一个匹配项的索引位置</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(a.index(<span class="number">1</span>))                   <span class="comment">#the result ： 0</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="1-5-insert"><a href="#1-5-insert" class="headerlink" title="1.5 insert"></a>1.5 insert</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#5. insert方法用于将对象插入到列表中</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">a.insert(<span class="number">0</span>,<span class="string">&#x27;aa&#x27;</span>)            <span class="comment">#the result : [&#x27;aa&#x27;, 1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-6-pop"><a href="#1-6-pop" class="headerlink" title="1.6 pop"></a>1.6 pop</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#6. pop方法会移除列表中的一个元素（默认是最后一个），并且返回该元素的值</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">a.pop()                             <span class="comment">#the result ： [1, 2]</span></span><br><span class="line">a.pop(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-7-remove"><a href="#1-7-remove" class="headerlink" title="1.7 remove"></a>1.7 remove</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#7. remove方法用于移除列表中某个值的第一个匹配项</span></span><br><span class="line">a = [<span class="string">&#x27;aa&#x27;</span>,<span class="string">&#x27;bb&#x27;</span>,<span class="string">&#x27;cc&#x27;</span>,<span class="string">&#x27;aa&#x27;</span>]</span><br><span class="line">a.remove(<span class="string">&#x27;aa&#x27;</span>)                      <span class="comment">#the result ： [&#x27;bb&#x27;, &#x27;cc&#x27;, &#x27;aa&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-8-reverse"><a href="#1-8-reverse" class="headerlink" title="1.8 reverse"></a>1.8 reverse</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#8. reverse方法将列表中的元素反向存放</span></span><br><span class="line">a = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]</span><br><span class="line">a.reverse()                         <span class="comment">#the result ： [&#x27;c&#x27;, &#x27;b&#x27;, &#x27;a&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-9-sort"><a href="#1-9-sort" class="headerlink" title="1.9 sort"></a>1.9 sort</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#9. sort方法用于在原位置对列表进行排序，意味着改变原来的列表，让其中的元素按一定顺序排列</span></span><br><span class="line">a = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">a.sort()                           <span class="comment">#the result ：[1, 2, 3, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-10-enumerate"><a href="#1-10-enumerate" class="headerlink" title="1.10 enumerate"></a>1.10 enumerate</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">66</span>]</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">enumerate</span>(li, <span class="number">1</span>):  <span class="comment"># 1.代表 k 从哪个数字开始</span></span><br><span class="line">    <span class="built_in">print</span>(k,v)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">1 11</span></span><br><span class="line"><span class="string">2 22</span></span><br><span class="line"><span class="string">3 33</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-11-range和xrange"><a href="#1-11-range和xrange" class="headerlink" title="1.11 range和xrange"></a>1.11 range和xrange</h3><ul>
+<li><p>指定范围，生成指定的数字</p>
+</li>
+<li><p>注：python3中的range类似python2中的xrange，比如a &#x3D; range(1,4) : a返回的不是列表对象而是一个可迭代对象（&lt;class ‘range’&gt;）</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1、range根据start与stop指定的范围以及step设定的步长，生成一个序列：range([start,] stop[, step])</span></span><br><span class="line"><span class="comment">#2、xrange 用法与 range 完全相同，所不同的是生成的不是一个list对象，而是一个生成器</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">2</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-12-列表去空"><a href="#1-12-列表去空" class="headerlink" title="1.12 列表去空"></a>1.12 列表去空</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 法1：</span></span><br><span class="line"><span class="built_in">filter</span>(<span class="literal">None</span>, your_list)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 法2：</span></span><br><span class="line"><span class="keyword">while</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">in</span> your_list:</span><br><span class="line">    your_list.remove(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 法3：</span></span><br><span class="line">your_list = [x <span class="keyword">for</span> x <span class="keyword">in</span> your_list <span class="keyword">if</span> x != <span class="string">&#x27;&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="02-元祖"><a href="#02-元祖" class="headerlink" title="02.元祖"></a>02.元祖</h2><ul>
+<li><strong>元组定义：</strong>元组和列表一样，也是一种序列，唯一的不同是元组不能修改。</li>
+</ul>
+<h3 id="2-1-创建元组"><a href="#2-1-创建元组" class="headerlink" title="2.1 创建元组"></a>2.1 创建元组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1. 创建元组</span></span><br><span class="line">a = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line"><span class="comment">#2. 将列表转换成元组</span></span><br><span class="line"><span class="built_in">tuple</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])                                    <span class="comment">#the result ： (1, 2, 3, 4)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-列表和元组常用函数"><a href="#2-2-列表和元组常用函数" class="headerlink" title="2.2 列表和元组常用函数"></a>2.2 列表和元组常用函数</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>com(x,y)</td>
+<td>比较两个值</td>
+</tr>
+<tr>
+<td>len(seq)</td>
+<td>返回序列的长度</td>
+</tr>
+<tr>
+<td>list(seq)</td>
+<td>把序列转换成列表</td>
+</tr>
+<tr>
+<td>max(args)</td>
+<td>返回序列或者参数集合中得最大值</td>
+</tr>
+<tr>
+<td>min(args)</td>
+<td>返回序列或者参数集合中的最小值</td>
+</tr>
+<tr>
+<td>reversed(seq)</td>
+<td>对序列进行反向迭代</td>
+</tr>
+<tr>
+<td>sorted(seq)</td>
+<td>返回已经排列的包含seq 所有元素的列表</td>
+</tr>
+<tr>
+<td>tuple(seq)</td>
+<td>把序列转换成元组</td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -492,7 +568,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tsblog.cn/2022/03/05/hello-world/">https://tsblog.cn/2022/03/05/hello-world/</a>
+                    <a href="https://tsblog.cn/pages/2270e1/">https://tsblog.cn/pages/2270e1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,10 +796,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2022/03/05/hello-world/">
                     <div class="card-image">
@@ -741,9 +816,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -752,7 +827,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,13 +837,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pages/2270e1/">
+                <a href="/pages/50a8ce/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="02.字符串">
                         
-                        <span class="card-title">01.列表</span>
+                        <span class="card-title">02.字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

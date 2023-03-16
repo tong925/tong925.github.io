@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 沦陷">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="16.高阶函数, 沦陷">
+    <meta name="description" content="00.匿名函数123456f = lambda x,y,z:x+y+zdef F(x,y,z):    return x+y+zf = lambda x:x if x % 2 != 0 else x + 100print(f(10))   ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 沦陷</title>
+    <title>16.高阶函数 | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -279,12 +279,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">16.高阶函数</h1>
                 </div>
             </div>
         </div>
@@ -405,6 +405,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                python基础
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -412,7 +425,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-05
+                    2021-02-11
                 </div>
                 
 
@@ -421,14 +434,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    745
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -453,19 +466,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="00-匿名函数"><a href="#00-匿名函数" class="headerlink" title="00.匿名函数"></a>00.匿名函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="keyword">lambda</span> x,y,z:x+y+z</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">F</span>(<span class="params">x,y,z</span>):</span><br><span class="line">    <span class="keyword">return</span> x+y+z</span><br><span class="line"></span><br><span class="line">f = <span class="keyword">lambda</span> x:x <span class="keyword">if</span> x % <span class="number">2</span> != <span class="number">0</span> <span class="keyword">else</span> x + <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(f(<span class="number">10</span>))                    <span class="comment"># 110</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li>三元运算</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;Tom&#x27;</span> <span class="keyword">if</span> <span class="number">1</span> == <span class="number">1</span> <span class="keyword">else</span> <span class="string">&#x27;fly&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br><span class="line"><span class="comment"># 运行结果： Tom</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="01-filter"><a href="#01-filter" class="headerlink" title="01.filter"></a>01.<code>filter</code></h2><ul>
+<li>filter()函数可以对序列做过滤处理，就是说可以使用一个自定的函数过滤一个序列，把序列的每一项传到自定义的过滤函数里处理，并返回结果做过滤。</li>
+<li>最终一次性返回过滤后的结果。</li>
+<li>filter()函数有两个参数：<ul>
+<li>第一个，自定函数名，必须的</li>
+<li>第二个，需要过滤的列，也是必须的</li>
+</ul>
+</li>
+<li>利用 filter、lambda表达式 获取l1中元素小于33的所有元素 l1 &#x3D; [11, 22, 33, 44, 55]</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l1= [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>,<span class="number">55</span>]</span><br><span class="line">a = <span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x&lt;<span class="number">33</span>, l1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(a))</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf8 -*-</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">F</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">if</span> x&lt;<span class="number">33</span>:</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">b = <span class="built_in">filter</span>(F,l1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(b))<span class="number">111</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入 &#x27;102304&#x27;  ==&gt; [&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;]</span></span><br><span class="line">l1= <span class="string">&#x27;102304&#x27;</span></span><br><span class="line">a = <span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x !=<span class="string">&#x27;0&#x27;</span>, l1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(a))</span><br></pre></td></tr></table></figure>
+
+<h2 id="02-map"><a href="#02-map" class="headerlink" title="02.map"></a>02.<code>map</code></h2><ul>
+<li>第一个参数接收一个函数名，第二个参数接收一个可迭代对象</li>
+<li>利用map，lambda表达式将所有偶数元素加100</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf8 -*-</span></span><br><span class="line">l1= [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>,<span class="number">55</span>]</span><br><span class="line">ret = <span class="built_in">map</span>(<span class="keyword">lambda</span> x:x-<span class="number">100</span> <span class="keyword">if</span> x % <span class="number">2</span> != <span class="number">0</span> <span class="keyword">else</span> x + <span class="number">100</span>,l1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(ret))</span><br><span class="line"><span class="comment"># 运行结果： [-89, 122, -67, 144, -45]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># lambda x:x-100 if x % 2 != 0 else x + 100</span></span><br><span class="line"><span class="comment"># 如果 &quot;if x % 2 != 0&quot; 条件成立返回 x-100</span></span><br><span class="line"><span class="comment"># 不成立：返回 x+100</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">F</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">if</span> x%<span class="number">2</span> != <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> x-<span class="number">100</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> x+<span class="number">100</span></span><br><span class="line">ret = <span class="built_in">map</span>(F,l1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(ret))</span><br></pre></td></tr></table></figure>
+
+<h2 id="03-reduce"><a href="#03-reduce" class="headerlink" title="03.reduce"></a>03.<code>reduce</code></h2><ul>
+<li>字符串反转</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf8 -*-</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;使用reduce将字符串反转&#x27;&#x27;&#x27;</span></span><br><span class="line">s = <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line">result = reduce(<span class="keyword">lambda</span> x,y:y+x,s)</span><br><span class="line"><span class="comment"># # 1、第一次：x=H,y=e  =&gt; y+x = eH</span></span><br><span class="line"><span class="comment"># # 2、第二次：x=l,y=eH  =&gt; y+x = leH</span></span><br><span class="line"><span class="comment"># # 3、第三次：x=l,y=leH  =&gt; y+x = lleH</span></span><br><span class="line"><span class="built_in">print</span>( result )      <span class="comment"># dlroW olleH</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="04-sorted"><a href="#04-sorted" class="headerlink" title="04.sorted"></a>04.<code>sorted</code></h2><ul>
+<li>经典面试题只 列表排序</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">students = [(<span class="string">&#x27;john&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="number">15</span>), (<span class="string">&#x27;jane&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="number">12</span>), (<span class="string">&#x27;dave&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="number">10</span>)]</span><br><span class="line"><span class="comment"># [(&#x27;dave&#x27;, &#x27;B&#x27;, 10), (&#x27;jane&#x27;, &#x27;B&#x27;, 12), (&#x27;john&#x27;, &#x27;A&#x27;, 15)]</span></span><br><span class="line"><span class="built_in">print</span>( <span class="built_in">sorted</span>(students, key=<span class="keyword">lambda</span> s: s[<span class="number">2</span>], reverse=<span class="literal">False</span>) )    <span class="comment"># 按年龄排序</span></span><br><span class="line"><span class="comment"># 结果：[(&#x27;dave&#x27;, &#x27;B&#x27;, 10), (&#x27;jane&#x27;, &#x27;B&#x27;, 12), (&#x27;john&#x27;, &#x27;A&#x27;, 15)]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="comment"># (&#x27;john&#x27;, &#x27;A&#x27;, 15)</span></span><br><span class="line">    <span class="keyword">return</span> x[<span class="number">2</span>]</span><br><span class="line"><span class="built_in">print</span>( <span class="built_in">sorted</span>(students, key=f, reverse=<span class="literal">False</span>) )    <span class="comment"># 按年龄排序</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对字典的value排序</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">&#x27;k1&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;k3&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;k2&#x27;</span>:<span class="number">2</span>&#125;</span><br><span class="line"><span class="comment"># d.items() = [(&#x27;k1&#x27;, 1), (&#x27;k3&#x27;, 3), (&#x27;k2&#x27;, 2)]</span></span><br><span class="line">a = <span class="built_in">sorted</span>(d.items(), key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(a)            <span class="comment"># [(&#x27;k1&#x27;, 1), (&#x27;k2&#x27;, 2), (&#x27;k3&#x27;, 3)]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>两个列表编一个字典</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">L1 = [<span class="string">&#x27;k1&#x27;</span>,<span class="string">&#x27;k2&#x27;</span>,<span class="string">&#x27;k3&#x27;</span>]</span><br><span class="line">L2 = [<span class="string">&#x27;v1&#x27;</span>,<span class="string">&#x27;v2&#x27;</span>,<span class="string">&#x27;v3&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>( <span class="built_in">list</span>(<span class="built_in">zip</span>(L1,L2)))</span><br><span class="line"><span class="comment"># zip(L1,L2) : [(&#x27;k1&#x27;, &#x27;v1&#x27;), (&#x27;k2&#x27;, &#x27;v2&#x27;), (&#x27;k3&#x27;, &#x27;v3&#x27;)]</span></span><br><span class="line"><span class="comment"># dict( [(&#x27;k1&#x27;, &#x27;v1&#x27;), (&#x27;k2&#x27;, &#x27;v2&#x27;), (&#x27;k3&#x27;, &#x27;v3&#x27;)] )  = &#123;&#x27;k1&#x27;: &#x27;v1&#x27;, &#x27;k2&#x27;: &#x27;v2&#x27;, &#x27;k3&#x27;: &#x27;v3&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -492,7 +541,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tsblog.cn/2022/03/05/hello-world/">https://tsblog.cn/2022/03/05/hello-world/</a>
+                    <a href="https://tsblog.cn/pages/a18e2b/">https://tsblog.cn/pages/a18e2b/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,18 +769,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/05/hello-world/">
+                <a href="/pages/2d9cd4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="15.网络七层">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">15.网络七层</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,18 +789,25 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            佟帅
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,13 +818,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pages/2270e1/">
+                <a href="/pages/480866/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="17.次重点">
                         
-                        <span class="card-title">01.列表</span>
+                        <span class="card-title">17.次重点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

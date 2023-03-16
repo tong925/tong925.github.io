@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="沦陷">
+    <meta name="keywords" content="分类: python, 沦陷">
     <meta name="description" content="选择有时候比努力更重要">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>沦陷</title>
+    <title>分类: python | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -262,56 +262,9 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item  white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -354,218 +307,71 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://github.com/tong925/tong925.github.io.git" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/tong925/tong925.github.io.git" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:13223238150@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2356578694" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2356578694" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/python/" title="python: 17">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F9EBEA;">python
+                        <span class="tag-length">17</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" title="python基础: 17">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">python基础
+                        <span class="tag-length">17</span>
+                    </span>
+                </a>
+                
+                
+            </div>
         </div>
     </div>
 </div>
 
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
 
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/03/05/hello-world/">
-                        <div class="card-image">
+                    <a href="/pages/ff07de/">
+                        <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="14.上下文管理">
                             
-                            <span class="card-title">Hello World</span>
+                            <span class="card-title">14.上下文管理</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                佟帅
-                                
-                            </span>
-                        </div>
-                    </div>
+                                01.上下文管理
+1、什么是with语句
 
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/pages/2270e1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
-                            
-                            <span class="card-title">01.列表</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                01.列表常用方法1.1 append123#1. append用于在列表末尾追加新的对象a = [1,2,3]a.append(4)                          #the result ： [1, 2, 3, 4]
-
+with是一种上下文管理协议，目的在于从流程图中把 try,except 和finally 关键字和资源分配释放相关代码统统去掉，简化try….except….finlally的处理流程。
+所以使
                             
                         </div>
                         <div class="publish-info">
@@ -592,28 +398,28 @@
                     
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/pages/50a8ce/">
-                        <div class="card-image">
+                    <a href="/pages/0e4385/">
+                        <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="02.字符串">
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="09.装饰器">
                             
-                            <span class="card-title">02.字符串</span>
+                            <span class="card-title">09.装饰器</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                01.字符串常用方法1.1 find方法
-作用：find方法可以在一个较长的字符串中查找子串，他返回子串所在位置的最左端索引，如果没有找到则返回-1
+                                01.装饰器1.1 什么是装饰器?（What）
+装饰器本质是函数，用来给其他函数添加新的功能
+特点：不修改调用方式、不修改源代码
 
-123a = &#x27;abcdefghijk&#x27;print(a.find(&
+1.2 装饰器的应用场景？（Where）
+用户认证，判断用户是否登录
+计算函数运行时间（算是一个功能、在项目
                             
                         </div>
                         <div class="publish-info">
@@ -640,13 +446,244 @@
                     
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/pages/34f94e/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="11.面向对象">
+                            
+                            <span class="card-title">11.面向对象</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                01.面向对象https://www.cnblogs.com/xiaonq/p/7880547.html#i7
+1.1 什么是面向对象？（What）
+使用模板的思想，将世界完事万物使用对象来表示一个类型
+
+1.2 封装、继承、多态？特性
+封
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                                
+                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/pages/70eebd/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="06.线程">
+                            
+                            <span class="card-title">06.线程</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                01.线程1.1 什么是线程
+1）线程是操作系统调度的最小单位
+2）线程是进程正真的执行者，是一些指令的集合（进程资源的拥有者）
+3）同一个进程下的多个线程共享内存空间，数据直接访问（数据共享）
+4）为了保证数据安全，必须使用线程锁
+
+说明
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                                
+                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/pages/24f2db/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="03.字典">
+                            
+                            <span class="card-title">03.字典</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                01.字典常用方法1.1 clear
+作用：clear方法清除字典中所有的项，这是一个原地操作，所以无返回值（或则说返回None）
+
+123456d = &#123;&#125;d[&#x27;Tom&#x27;]=8777        
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                                
+                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/pages/7cc201/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="07.协程">
+                            
+                            <span class="card-title">07.协程</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                01.协程https://www.cnblogs.com/xiaonq/p/7905347.html#i4
+1.1 什么是协程
+1）协程微线程，纤程，本质是一个单线程
+2）协程能在单线程处理高并发，因为遇到IO自动切换
+线程遇到I/O操作会
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                                
+                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/pages/f8baa8/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="05.进程">
+                            
+                            <span class="card-title">05.进程</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                01.进程1.1 什么是进程？
+1.进程是资源分配的最小单位（ 内存、cpu、网络、io）
+2.一个运行起来的程序就是一个进程
+什么是程序（程序是我们存储在硬盘里的代码）
+硬盘（256G）、内存条（8G）
+当我们双击图标，打开程序的时候，实
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                                
+                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/pages/0316d2/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="04.集合">
@@ -654,7 +691,6 @@
                             <span class="card-title">04.集合</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
@@ -696,30 +732,25 @@
                     
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/pages/f8baa8/">
-                        <div class="card-image">
+                    <a href="/pages/50a8ce/">
+                        <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="05.进程">
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="02.字符串">
                             
-                            <span class="card-title">05.进程</span>
+                            <span class="card-title">02.字符串</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                01.进程1.1 什么是进程？
-1.进程是资源分配的最小单位（ 内存、cpu、网络、io）
-2.一个运行起来的程序就是一个进程
-什么是程序（程序是我们存储在硬盘里的代码）
-硬盘（256G）、内存条（8G）
-当我们双击图标，打开程序的时候，实
+                                01.字符串常用方法1.1 find方法
+作用：find方法可以在一个较长的字符串中查找子串，他返回子串所在位置的最左端索引，如果没有找到则返回-1
+
+123a = &#x27;abcdefghijk&#x27;print(a.find(&
                             
                         </div>
                         <div class="publish-info">
@@ -746,29 +777,23 @@
                     
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/pages/7cc201/">
-                        <div class="card-image">
+                    <a href="/pages/2270e1/">
+                        <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="07.协程">
+                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
                             
-                            <span class="card-title">07.协程</span>
+                            <span class="card-title">01.列表</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                01.协程https://www.cnblogs.com/xiaonq/p/7905347.html#i4
-1.1 什么是协程
-1）协程微线程，纤程，本质是一个单线程
-2）协程能在单线程处理高并发，因为遇到IO自动切换
-线程遇到I/O操作会
+                                01.列表常用方法1.1 append123#1. append用于在列表末尾追加新的对象a = [1,2,3]a.append(4)                          #the result ： [1, 2, 3, 4]
+
                             
                         </div>
                         <div class="publish-info">
@@ -795,211 +820,9 @@
                     
                 </div>
             </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/pages/24f2db/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="03.字典">
-                            
-                            <span class="card-title">03.字典</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                01.字典常用方法1.1 clear
-作用：clear方法清除字典中所有的项，这是一个原地操作，所以无返回值（或则说返回None）
-
-123456d = &#123;&#125;d[&#x27;Tom&#x27;]=8777        
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/python/" class="post-category">
-                                    python
-                                </a>
-                                
-                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    python基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/pages/70eebd/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="06.线程">
-                            
-                            <span class="card-title">06.线程</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                01.线程1.1 什么是线程
-1）线程是操作系统调度的最小单位
-2）线程是进程正真的执行者，是一些指令的集合（进程资源的拥有者）
-3）同一个进程下的多个线程共享内存空间，数据直接访问（数据共享）
-4）为了保证数据安全，必须使用线程锁
-
-说明
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/python/" class="post-category">
-                                    python
-                                </a>
-                                
-                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    python基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/pages/34f94e/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="11.面向对象">
-                            
-                            <span class="card-title">11.面向对象</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                01.面向对象https://www.cnblogs.com/xiaonq/p/7880547.html#i7
-1.1 什么是面向对象？（What）
-使用模板的思想，将世界完事万物使用对象来表示一个类型
-
-1.2 封装、继承、多态？特性
-封
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/python/" class="post-category">
-                                    python
-                                </a>
-                                
-                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    python基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/pages/0e4385/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="09.装饰器">
-                            
-                            <span class="card-title">09.装饰器</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                01.装饰器1.1 什么是装饰器?（What）
-装饰器本质是函数，用来给其他函数添加新的功能
-特点：不修改调用方式、不修改源代码
-
-1.2 装饰器的应用场景？（Where）
-用户认证，判断用户是否登录
-计算函数运行时间（算是一个功能、在项目
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/python/" class="post-category">
-                                    python
-                                </a>
-                                
-                                <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    python基础
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
             
         </div>
     </article>
-
 </main>
 
 
@@ -1017,7 +840,7 @@
         </div>
         <div class="col s6 m4 l4">
             
-            <a href="/page/2/"
+            <a href="/categories/python/page/2/"
                class="right btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fas fa-angle-right"></i>
             </a>

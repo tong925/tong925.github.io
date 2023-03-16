@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 沦陷">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="07.协程, 沦陷">
+    <meta name="description" content="01.协程https://www.cnblogs.com/xiaonq/p/7905347.html#i4
+1.1 什么是协程
+1）协程微线程，纤程，本质是一个单线程
+2）协程能在单线程处理高并发，因为遇到IO自动切换
+线程遇到I/O操作会">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 沦陷</title>
+    <title>07.协程 | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -279,12 +283,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">07.协程</h1>
                 </div>
             </div>
         </div>
@@ -405,6 +409,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                python基础
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -412,7 +429,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-05
+                    2021-02-11
                 </div>
                 
 
@@ -421,14 +438,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -453,19 +470,96 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="01-协程"><a href="#01-协程" class="headerlink" title="01.协程"></a>01.协程</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaonq/p/7905347.html#i4">https://www.cnblogs.com/xiaonq/p/7905347.html#i4</a></p>
+<h3 id="1-1-什么是协程"><a href="#1-1-什么是协程" class="headerlink" title="1.1 什么是协程"></a>1.1 什么是协程</h3><ul>
+<li>1）<code>协程微线程，纤程，本质是一个单线程</code></li>
+<li>2）<code>协程能在单线程处理高并发，因为遇到IO自动切换</code><ul>
+<li><code>线程遇到I/O操作会等待、阻塞</code>，<code>协程遇到I/O会自动切换</code>（剩下的只有CPU操作）</li>
+<li>线程的状态<code>保存在CPU的寄存器和栈里而协程拥有自己的空间，所以无需上下文切换的开销，所以快</code></li>
+</ul>
+</li>
+<li>3）<code>为甚么协程能够遇到I/O自动切换</code><ul>
+<li>greenlet是C语言写的一个模块，遇到IO手动切换</li>
+<li>协程有一个gevent模块(封装了greenlet模块)，遇到I&#x2F;O自动切换</li>
+</ul>
+</li>
+<li>4）协程拥有自己的空间，所以无需上下文切换的开销</li>
+</ul>
+<h3 id="1-2-协程优缺点"><a href="#1-2-协程优缺点" class="headerlink" title="1.2 协程优缺点"></a>1.2 协程优缺点</h3><ul>
+<li><p><code>协程缺点</code></p>
+<ul>
+<li>无法利用多核资源：<code>协程的本质是个单线程,它不能同时将 单个CPU 的多个核用上</code>,协程需要和进程配合才能运行在多CPU上</li>
+<li><code>协程如果阻塞掉，整个程序都阻塞</code></li>
+</ul>
+</li>
+<li><p><code>协程最大的优点</code></p>
+<ul>
+<li>不仅是处理高并发（单线程下处理高并发）</li>
+<li>特别节省资源（协程本质是一个单线程，当然节省资源）<ul>
+<li>500日活，用php写需要两百多态机器，但是golang只需要二十多太机器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-协程遇到I-x2F-O切换，那活只谁干的？"><a href="#1-3-协程遇到I-x2F-O切换，那活只谁干的？" class="headerlink" title="1.3 协程遇到I&#x2F;O切换，那活只谁干的？"></a>1.3 协程遇到I&#x2F;O切换，那活只谁干的？</h3><ul>
+<li><p>简单说法</p>
+<ul>
+<li>协程遇到I&#x2F;O后自动切换，但是会保持一个socket连接，交给系统内核去处理工作</li>
+<li>epoll()就工作内核中，他维护了一个链表，来存放所有的socket连接</li>
+<li>当内核处理完成后就会回调一个函数，以socket文件描述符为key，结果为value存放到字典中</li>
+<li>此时这个列表还是在内核中，需要将这个字典拷贝到用户空间（用户进程中）</li>
+</ul>
+</li>
+<li><p>本质</p>
+<ul>
+<li>1.<code>epoll()中内核则维护一个链表</code>，epoll_wait直接检查链表是不是空就知道是否有文件描述符准备好了。</li>
+<li>2.在内核实现中epoll是根据每个sockfd上面的与设备驱动程序建立起来的回调函数实现的。</li>
+<li>3.某个sockfd上的事件发生时，与它对应的回调函数就会被调用，来把这个sockfd加入链表，其他处于“空闲的”状态的则不会。</li>
+<li>4.epoll上面链表中获取文件描述，这里使用内存映射（mmap）技术，避免了复制大量文件描述符带来的开销</li>
+<li>内存映射（mmap）：内存映射文件，是由一个文件到一块内存的映射，将不必再对文件执行I&#x2F;O操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-Python中协程的模块"><a href="#1-4-Python中协程的模块" class="headerlink" title="1.4 Python中协程的模块"></a>1.4 Python中协程的模块</h3><ul>
+<li>greenlet：遇到I&#x2F;O<code>手动切换</code>，是一个C模块</li>
+<li>gevent：对greenlet封装，遇到I&#x2F;O<code>自动切换</code>（<code>借助C语言库greenlet</code>）</li>
+<li>asyncio：和gevent一样，也是实现协程的一个模块（<code>python自己实现</code>）<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaonq/p/12870204.html">https://www.cnblogs.com/xiaonq/p/12870204.html</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="02-进程，线程，协程爬取页面"><a href="#02-进程，线程，协程爬取页面" class="headerlink" title="02.进程，线程，协程爬取页面"></a>02.进程，线程，协程爬取页面</h2><ul>
+<li>特点：<ul>
+<li><code>1.进程</code>：启用进程非常浪费资源</li>
+<li><code>2.线程</code>：线程多，并且在阻塞过程中无法执行其他任务</li>
+<li><code>3.协程</code>：gevent只用起一个线程，当请求发出去后gevent就不管,永远就只有一个线程工作，谁先回来先处理</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-for循环"><a href="#2-1-for循环" class="headerlink" title="2.1 for循环"></a>2.1 for循环</h3><ul>
+<li>第四：性能最差</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url_list = [</span><br><span class="line">    <span class="string">&#x27;https://www.baidu.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;http://dig.chouti.com/&#x27;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> url <span class="keyword">in</span> <span class="attr">url_list</span>:</span><br><span class="line">    result = requests.<span class="title function_">get</span>(url)</span><br><span class="line">    <span class="title function_">print</span>(result.<span class="property">text</span>)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-进程池"><a href="#2-2-进程池" class="headerlink" title="2.2 进程池"></a>2.2 进程池</h3><ul>
+<li><code>缺点：</code>启用进程非常浪费资源</li>
+</ul>
+<h4 id="2-2-1-multiprocessing-Pool"><a href="#2-2-1-multiprocessing-Pool" class="headerlink" title="2.2.1 multiprocessing.Pool"></a>2.2.1 multiprocessing.Pool</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_request</span>(<span class="params">url</span>):</span><br><span class="line">    result = requests.get(url)</span><br><span class="line">    <span class="built_in">print</span>(result.text)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">call</span>(<span class="params">arg</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;--&gt;exec done:&#x27;</span>,<span class="string">&quot;测试进程池执行后回调功能&quot;</span>)</span><br><span class="line"></span><br><span class="line">url_list = [</span><br><span class="line">    <span class="string">&#x27;https://www.baidu.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://www.google.com/&#x27;</span>,         <span class="comment">#google页面会卡住，知道页面超时后这个进程才结束</span></span><br><span class="line">    <span class="string">&#x27;http://dig.chouti.com/&#x27;</span>,          <span class="comment">#chouti页面内容会直接返回，不会等待Google页面的返回</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    pool = Pool(<span class="number">10</span>)        <span class="comment"># 创建线程池</span></span><br><span class="line">    <span class="keyword">for</span> url <span class="keyword">in</span> url_list:</span><br><span class="line">        <span class="comment">#用法1 callback作用是指定只有当Foo运行结束后就执行callback调用的函数,父进程调用的callback函数</span></span><br><span class="line">        pool.apply_async(func=fetch_request, args=(url,),callback=call)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;end&#x27;</span>)</span><br><span class="line">    pool.close()    <span class="comment">#关闭pool</span></span><br><span class="line">    pool.join()     <span class="comment">#进程池中进程执行完毕后再关闭，如果注释，那么程序直接关闭。</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-2-ProcessPoolExecutor"><a href="#2-2-2-ProcessPoolExecutor" class="headerlink" title="2.2.2 ProcessPoolExecutor"></a>2.2.2 ProcessPoolExecutor</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ProcessPoolExecutor</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_request</span>(<span class="params">url</span>):</span><br><span class="line">    result = requests.get(url)</span><br><span class="line">    <span class="built_in">print</span>(result.text)</span><br><span class="line"></span><br><span class="line">url_list = [</span><br><span class="line">    <span class="string">&#x27;https://www.baidu.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://www.google.com/&#x27;</span>,         <span class="comment">#google页面会卡住，知道页面超时后这个进程才结束</span></span><br><span class="line">    <span class="string">&#x27;http://dig.chouti.com/&#x27;</span>,          <span class="comment">#chouti页面内容会直接返回，不会等待Google页面的返回</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    pool = ProcessPoolExecutor(<span class="number">10</span>)        <span class="comment"># 创建线程池</span></span><br><span class="line">    <span class="keyword">for</span> url <span class="keyword">in</span> url_list:</span><br><span class="line">        pool.submit(fetch_request,url)    <span class="comment"># 去线程池中获取一个进程，进程去执行fetch_request方法</span></span><br><span class="line">    pool.shutdown(wait=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-线程池"><a href="#2-3-线程池" class="headerlink" title="2.3 线程池"></a>2.3 线程池</h3><ul>
+<li><code>缺点：</code> 创建一个新线程将消耗大量的计算资源，并且在阻塞过程中无法执行其他任务。</li>
+<li><code>例：</code> 比如线程池中10个线程同时去10个url获取数据，当数据还没来时这些线程全部都在等待，不做事。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_request</span>(<span class="params">url</span>):</span><br><span class="line">    result = requests.get(url)</span><br><span class="line">    <span class="built_in">print</span>(result.text)</span><br><span class="line"></span><br><span class="line">url_list = [</span><br><span class="line">    <span class="string">&#x27;https://www.baidu.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://www.google.com/&#x27;</span>,         <span class="comment">#google页面会卡住，知道页面超时后这个进程才结束</span></span><br><span class="line">    <span class="string">&#x27;http://dig.chouti.com/&#x27;</span>,          <span class="comment">#chouti页面内容会直接返回，不会等待Google页面的返回</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">pool = ThreadPoolExecutor(<span class="number">10</span>)            <span class="comment"># 创建一个线程池，最多开10个线程</span></span><br><span class="line"><span class="keyword">for</span> url <span class="keyword">in</span> url_list:</span><br><span class="line">    pool.submit(fetch_request,url)       <span class="comment"># 去线程池中获取一个线程，线程去执行fetch_request方法</span></span><br><span class="line"></span><br><span class="line">pool.shutdown(<span class="literal">True</span>)                      <span class="comment"># 主线程自己关闭，让子线程自己拿任务执行</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="2-4-协程"><a href="#2-4-协程" class="headerlink" title="2.4 协程"></a>2.4 协程</h3><ul>
+<li><code>特点 ：</code>gevent只用起一个线程，当请求发出去后gevent就不管,永远就只有一个线程工作，谁先回来先处理</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gevent</span><br><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey</span><br><span class="line">monkey.patch_all(select=<span class="literal">False</span>)  <span class="comment"># 注意，这个导包顺序不要变</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这些请求谁先回来就先处理谁</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_async</span>(<span class="params">method, url, req_kwargs</span>):</span><br><span class="line">    response = requests.request(method=method, url=url, **req_kwargs)</span><br><span class="line">    <span class="built_in">print</span>(response.url, response.content)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ##### 发送请求 #####</span></span><br><span class="line">gevent.joinall([</span><br><span class="line">    gevent.spawn(fetch_async, method=<span class="string">&#x27;get&#x27;</span>, url=<span class="string">&#x27;https://www.baidu.com/&#x27;</span>, req_kwargs=&#123;&#125;),</span><br><span class="line">    gevent.spawn(fetch_async, method=<span class="string">&#x27;get&#x27;</span>, url=<span class="string">&#x27;https://www.google.com/&#x27;</span>, req_kwargs=&#123;&#125;),</span><br><span class="line">    gevent.spawn(fetch_async, method=<span class="string">&#x27;get&#x27;</span>, url=<span class="string">&#x27;https://github.com/&#x27;</span>, req_kwargs=&#123;&#125;),</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -492,7 +586,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tsblog.cn/2022/03/05/hello-world/">https://tsblog.cn/2022/03/05/hello-world/</a>
+                    <a href="https://tsblog.cn/pages/7cc201/">https://tsblog.cn/pages/7cc201/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,18 +814,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/05/hello-world/">
+                <a href="/pages/f8baa8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="05.进程">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">05.进程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,18 +834,25 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            佟帅
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,13 +863,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pages/2270e1/">
+                <a href="/pages/24f2db/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="03.字典">
                         
-                        <span class="card-title">01.列表</span>
+                        <span class="card-title">03.字典</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

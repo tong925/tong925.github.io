@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 沦陷">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="02.字符串, 沦陷">
+    <meta name="description" content="01.字符串常用方法1.1 find方法
+作用：find方法可以在一个较长的字符串中查找子串，他返回子串所在位置的最左端索引，如果没有找到则返回-1
+
+123a = &amp;#x27;abcdefghijk&amp;#x27;print(a.find(&amp;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 沦陷</title>
+    <title>02.字符串 | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -279,12 +282,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">02.字符串</h1>
                 </div>
             </div>
         </div>
@@ -405,6 +408,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                python基础
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -412,7 +428,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-05
+                    2021-02-11
                 </div>
                 
 
@@ -421,14 +437,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    604
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -453,20 +469,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="01-字符串常用方法"><a href="#01-字符串常用方法" class="headerlink" title="01.字符串常用方法"></a>01.字符串常用方法</h2><h3 id="1-1-find方法"><a href="#1-1-find方法" class="headerlink" title="1.1 find方法"></a>1.1 <code>find</code>方法</h3><ul>
+<li><code>作用：</code>find方法可以在一个较长的字符串中查找子串，他返回子串所在位置的最左端索引，如果没有找到则返回-1</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;abcdefghijk&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(a.find(<span class="string">&#x27;abc&#x27;</span>))                         <span class="comment">#the result ： 0</span></span><br><span class="line"><span class="built_in">print</span>(a.find(<span class="string">&#x27;abc&#x27;</span>,<span class="number">10</span>,<span class="number">100</span>))                    <span class="comment">#the result ： 11  指定查找的起始和结束查找位置</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-join方法"><a href="#1-2-join方法" class="headerlink" title="1.2 join方法"></a>1.2 <code>join</code>方法</h3><ul>
+<li><code>作用：</code>join方法是非常重要的字符串方法，他是split方法的逆方法，用来连接序列中的元素，并且需要被连接的元素都必须是字符串。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;+&#x27;</span>.join(a))                                    <span class="comment">#the result ： 1+2+3</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-split方法"><a href="#1-3-split方法" class="headerlink" title="1.3 split方法"></a>1.3 <code>split</code>方法</h3><ul>
+<li><code>作用：</code>这是一个非常重要的字符串，它是join的逆方法，用来将字符串分割成序列</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">print</span>(<span class="string">&#x27;1+2+3+4&#x27;</span>.<span class="title function_">split</span>(<span class="string">&#x27;+&#x27;</span>))                            #the result ： [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-strip"><a href="#1-4-strip" class="headerlink" title="1.4 strip"></a>1.4 strip</h3><ul>
+<li><code>作用：</code>strip 方法返回去除首位空格（不包括内部）的字符串</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;   test   test    &quot;</span>.strip())                <span class="comment">#the result ：“test   test”</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="1-5-replace"><a href="#1-5-replace" class="headerlink" title="1.5 replace"></a>1.5 replace</h3><ul>
+<li><code>作用：</code>replace方法返回某字符串所有匹配项均被替换之后得到字符串</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;This is a test&quot;</span>.replace(<span class="string">&#x27;is&#x27;</span>,<span class="string">&#x27;is_test&#x27;</span>))     <span class="comment">#the result ： This_test is_test a test</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="1-6-首字母大写"><a href="#1-6-首字母大写" class="headerlink" title="1.6 首字母大写"></a>1.6 首字母大写</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&#x27;aBdkndfkFFD&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.capitalize()</span><br><span class="line"><span class="string">&#x27;Abdkndfkffd&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-7-Pinyin-模块，将汉字转换成拼音"><a href="#1-7-Pinyin-模块，将汉字转换成拼音" class="headerlink" title="1.7 Pinyin 模块，将汉字转换成拼音"></a>1.7 Pinyin 模块，将汉字转换成拼音</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> xpinyin <span class="keyword">import</span> Pinyin</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    p = Pinyin()</span><br><span class="line">    fullname = raw_input(<span class="string">&#x27;name：&#x27;</span>).strip()</span><br><span class="line">    fullname = fullname.decode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span> fullname</span><br><span class="line">    xin = fullname[<span class="number">0</span>]</span><br><span class="line">    ming = fullname[<span class="number">1</span>:]</span><br><span class="line">    name = ming + <span class="string">&#x27;.&#x27;</span> + xin</span><br><span class="line">    username = p.get_pinyin(name, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span> username</span><br><span class="line">    <span class="built_in">print</span> username + <span class="string">&#x27;@yiducloud.cn&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="02-字符串格式化"><a href="#02-字符串格式化" class="headerlink" title="02.字符串格式化"></a>02.字符串格式化</h2><h3 id="2-1-使用百分号（-）字符串格式化"><a href="#2-1-使用百分号（-）字符串格式化" class="headerlink" title="2.1 使用百分号（%）字符串格式化"></a>2.1 使用百分号（%）字符串格式化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%d to hex is %x&quot;</span> %(num, num))        <span class="comment">#100 to hex is 64</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%d to hex is %#x&quot;</span> %(num, num))       <span class="comment">#100 to hex is 0x64</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-使用format字符串格式化"><a href="#2-2-使用format字符串格式化" class="headerlink" title="2.2 使用format字符串格式化"></a>2.2 使用format字符串格式化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1. 位置参数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&#123;0&#125; is &#123;1&#125; years old&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;tom&quot;</span>, <span class="number">28</span>))            <span class="comment">#tom is 28 years old</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&#123;&#125; is &#123;&#125; years old&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;tom&quot;</span>, <span class="number">28</span>))             <span class="comment">#tom is 28 years old</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hi, &#123;0&#125;! &#123;0&#125; is &#123;1&#125; years old&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;tom&quot;</span>, <span class="number">28</span>))      <span class="comment">#Hi, tom! tom is 28 years old</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#2. 关键字参数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&#123;name&#125; is &#123;age&#125; years old&quot;</span>.<span class="built_in">format</span>(name = <span class="string">&quot;tom&quot;</span>, age = <span class="number">28</span>))    <span class="comment">#tom is 28 years old</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#3. 下标参数</span></span><br><span class="line">li = [<span class="string">&quot;tom&quot;</span>, <span class="number">28</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&#123;0[0]&#125; is &#123;0[1]&#125; years old&quot;</span>.<span class="built_in">format</span>(li))          <span class="comment">#tom is 28 years old</span></span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -492,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tsblog.cn/2022/03/05/hello-world/">https://tsblog.cn/2022/03/05/hello-world/</a>
+                    <a href="https://tsblog.cn/pages/50a8ce/">https://tsblog.cn/pages/50a8ce/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,18 +754,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/05/hello-world/">
+                <a href="/pages/2270e1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">01.列表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,18 +774,25 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            佟帅
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,13 +803,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pages/2270e1/">
+                <a href="/pages/0316d2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="04.集合">
                         
-                        <span class="card-title">01.列表</span>
+                        <span class="card-title">04.集合</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

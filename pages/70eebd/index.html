@@ -4,8 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 沦陷">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="06.线程, 沦陷">
+    <meta name="description" content="01.线程1.1 什么是线程
+1）线程是操作系统调度的最小单位
+2）线程是进程正真的执行者，是一些指令的集合（进程资源的拥有者）
+3）同一个进程下的多个线程共享内存空间，数据直接访问（数据共享）
+4）为了保证数据安全，必须使用线程锁
+
+说明">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 沦陷</title>
+    <title>06.线程 | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -279,12 +285,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">06.线程</h1>
                 </div>
             </div>
         </div>
@@ -405,6 +411,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                python基础
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -412,7 +431,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-05
+                    2021-02-11
                 </div>
                 
 
@@ -421,14 +440,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -453,19 +472,102 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="01-线程"><a href="#01-线程" class="headerlink" title="01.线程"></a>01.线程</h2><h3 id="1-1-什么是线程"><a href="#1-1-什么是线程" class="headerlink" title="1.1 什么是线程"></a>1.1 什么是线程</h3><ul>
+<li>1）线程是操作系统调度的最小单位</li>
+<li>2）线程是进程正真的执行者，是一些指令的集合（进程资源的拥有者）</li>
+<li>3）同一个进程下的多个<code>线程共享内存空间</code>，数据直接访问（数据共享）</li>
+<li>4）为了保证数据安全，必须使用<code>线程锁</code></li>
+</ul>
+<p><code>说明：</code>下面利用for循环同时启动50个线程并行执行，执行时间是3秒而不是所有线程执行时间的总和</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sayhi</span>(<span class="params">num</span>): <span class="comment">#定义每个线程要运行的函数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;running on number:%s&quot;</span> %num)</span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>):</span><br><span class="line">    t = threading.Thread(target=sayhi,args=(<span class="string">&#x27;t-%s&#x27;</span>%i,))</span><br><span class="line">    t.start()</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-GIL锁和线程锁"><a href="#1-2-GIL锁和线程锁" class="headerlink" title="1.2 GIL锁和线程锁"></a>1.2 GIL锁和线程锁</h3><ul>
+<li>GIL全局解释器锁<ul>
+<li>在python全局解释器下，保证同一时间只有一个线程运行</li>
+<li>防止多个线程都修改数据</li>
+</ul>
+</li>
+<li>线程锁（互斥锁）<ul>
+<li>GIL锁只能保证同一时间只能有一个线程对某个资源操作，但当上一个线程还未执行完毕时可能就会释放GIL，其他线程就可以操作了</li>
+<li>线程锁本质把线程中的数据加了一把互斥锁<ul>
+<li>加上线程锁之后所有其他线程，读都不能读这个数据</li>
+</ul>
+</li>
+<li>有了GIL全局解释器锁为什么还需要线程锁<ul>
+<li>因为cpu是分时使用的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>在有GIL的情况下执行 count = count + 1 会出错原因解析，用线程锁解决方法</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1）第一步：count = 0   count初始值为0</span></span><br><span class="line"><span class="comment"># 2）第二步：线程1要执行对count加1的操作首先申请GIL全局解释器锁</span></span><br><span class="line"><span class="comment"># 3）第三步：调用操作系统原生线程在操作系统中执行</span></span><br><span class="line"><span class="comment"># 4）第四步：count加1还未执行完毕，时间到了被要求释放GIL</span></span><br><span class="line"><span class="comment"># 5）第五步：线程1释放了GIL后线程2此时也要对count进行操作，此时线程1还未执行完，所以count还是0</span></span><br><span class="line"><span class="comment"># 6）第六步：线程2此时拿到count = 0后也要对count进行加1操作，假如线程2执行很快，一次就完成了</span></span><br><span class="line"><span class="comment">#    count加1的操作，那么count此时就从0变成了1</span></span><br><span class="line"><span class="comment"># 7）第七步：线程2执行完加1后就赋值count=1并释放GIL</span></span><br><span class="line"><span class="comment"># 8）第八步：线程2执行完后cpu又交给了线程1，线程1根据上下文继续执行count加1操作，先拿到GIL</span></span><br><span class="line"><span class="comment">#    锁，完成加1操作，由于线程1先拿到的数据count=0，执行完加1后结果还是1</span></span><br><span class="line"><span class="comment"># 9）第九步：线程1将count=1在次赋值给count并释放GIL锁，此时连个线程都对数据加1，但是值最终是1</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>死锁定义</code><ul>
+<li>两个以上的进程或线程在执行过程中，因争夺资源而造成的一种互相等待的现象，若无外力作用，它们都将无法推进下去</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-多线程或者线程池"><a href="#1-3-多线程或者线程池" class="headerlink" title="1.3 多线程或者线程池"></a>1.3 多线程或者线程池</h3><ul>
+<li>线程有哪些模块？</li>
+<li>线程池有哪些模块？</li>
+</ul>
+<h3 id="1-4-join-和setDaemon"><a href="#1-4-join-和setDaemon" class="headerlink" title="1.4 join()和setDaemon()"></a>1.4 join()和setDaemon()</h3><h4 id="2-4-1-join"><a href="#2-4-1-join" class="headerlink" title="2.4.1 join()"></a>2.4.1 join()</h4><ul>
+<li><code>实现所有线程都执行结束后再执行主线程</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">start_time = time.<span class="title function_">time</span>()</span><br><span class="line"></span><br><span class="line">def <span class="title function_">sayhi</span>(num): #定义每个线程要运行的函数</span><br><span class="line">    <span class="title function_">print</span>(<span class="string">&quot;running on number:%s&quot;</span> %num)</span><br><span class="line">    time.<span class="title function_">sleep</span>(<span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="title function_">range</span>(<span class="number">50</span>):</span><br><span class="line">    t = threading.<span class="title class_">Thread</span>(target=sayhi,args=(<span class="string">&#x27;t-%s&#x27;</span>%i,))</span><br><span class="line">    t.<span class="title function_">setDaemon</span>(<span class="title class_">True</span>)  #把当前线程变成守护线程，必须在t.<span class="title function_">start</span>()前设置</span><br><span class="line">    t.<span class="title function_">start</span>()          #启动一个线程，程序不会阻塞</span><br><span class="line"><span class="title function_">print</span>(<span class="string">&#x27;cost time:&#x27;</span>,time.<span class="title function_">time</span>() - start_time)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="2-4-2-setDaemon"><a href="#2-4-2-setDaemon" class="headerlink" title="2.4.2 setDaemon()"></a>2.4.2 setDaemon()</h4><ul>
+<li><code>守护线程，主线程退出时，需要子线程随主线程退出</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">start_time = time.<span class="title function_">time</span>()</span><br><span class="line"></span><br><span class="line">def <span class="title function_">sayhi</span>(num): #定义每个线程要运行的函数</span><br><span class="line">    <span class="title function_">print</span>(<span class="string">&quot;running on number:%s&quot;</span> %num)</span><br><span class="line">    time.<span class="title function_">sleep</span>(<span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="title function_">range</span>(<span class="number">50</span>):</span><br><span class="line">    t = threading.<span class="title class_">Thread</span>(target=sayhi,args=(<span class="string">&#x27;t-%s&#x27;</span>%i,))</span><br><span class="line">    t.<span class="title function_">setDaemon</span>(<span class="title class_">True</span>)  #把当前线程变成守护线程，必须在t.<span class="title function_">start</span>()前设置</span><br><span class="line">    t.<span class="title function_">start</span>()          #启动一个线程，程序不会阻塞</span><br><span class="line"><span class="title function_">print</span>(<span class="string">&#x27;cost time:&#x27;</span>,time.<span class="title function_">time</span>() - start_time)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+
+<h3 id="1-5-Python中使用过的线程模块？"><a href="#1-5-Python中使用过的线程模块？" class="headerlink" title="1.5 Python中使用过的线程模块？"></a>1.5 Python中使用过的线程模块？</h3><h4 id="1-5-1-threading"><a href="#1-5-1-threading" class="headerlink" title="1.5.1 threading"></a>1.5.1 threading</h4><ul>
+<li>Python提供了几个用于多线程编程的模块，包括thread、threading和Queue等。</li>
+<li>thread和threading模块允许程序员创建和管理线程。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sayhi</span>(<span class="params">num</span>): <span class="comment">#定义每个线程要运行的函数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;running on number:%s&quot;</span> %num)</span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>):</span><br><span class="line">    t = threading.Thread(target=sayhi,args=(<span class="string">&#x27;t-%s&#x27;</span>%i,))</span><br><span class="line">    t.start()</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-5-2-concurrent-futures"><a href="#1-5-2-concurrent-futures" class="headerlink" title="1.5.2 concurrent.futures"></a>1.5.2 concurrent.futures</h4><ul>
+<li><p><code>1、简介</code> <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/concurrent.futures.html">参考官网</a></p>
+<ul>
+<li>1、Python标准库为我们提供了threading和multiprocessing模块编写相应的多线程&#x2F;多进程代码</li>
+<li>2、但是当项目达到一定的规模，频繁创建&#x2F;销毁进程或者线程是非常消耗资源的，这个时候我们就要编写自己的线程池&#x2F;进程池，以空间换时间。</li>
+<li>3、但从Python3.2开始，标准库为我们提供了concurrent.futures模块，它提供了ThreadPoolExecutor和ProcessPoolExecutor两个类，</li>
+<li>4、实现了对threading和multiprocessing的进一步抽象，对编写线程池&#x2F;进程池提供了直接的支持。</li>
+</ul>
+</li>
+<li><p><code>2、Executor和Future</code></p>
+<ul>
+<li><p><code>1. Executor</code></p>
+<ul>
+<li><p>concurrent.futures模块的基础是Exectuor，Executor是一个抽象类，它不能被直接使用。</p>
+</li>
+<li><p>但是它提供的两个子类ThreadPoolExecutor和ProcessPoolExecutor却是非常有用</p>
+</li>
+<li><p>我们可以将相应的tasks直接放入线程池&#x2F;进程池，不需要维护Queue来操心死锁的问题，线程池&#x2F;进程池会自动帮我们调度。</p>
+</li>
+</ul>
+</li>
+<li><p><code>2. Future</code></p>
+<ul>
+<li>Future你可以把它理解为一个在未来完成的操作，这是异步编程的基础，</li>
+<li>传统编程模式下比如我们操作queue.get的时候，在等待返回结果之前会产生阻塞，cpu不能让出来做其他事情</li>
+<li>而Future的引入帮助我们在等待的这段时间可以完成其他的操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>concurrent.futures.ThreadPoolExecutor 抓取网页</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_request</span>(<span class="params">url</span>):</span><br><span class="line">    result = requests.get(url)</span><br><span class="line">    <span class="built_in">print</span>(result.text)</span><br><span class="line"></span><br><span class="line">url_list = [</span><br><span class="line">    <span class="string">&#x27;https://www.baidu.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://www.google.com/&#x27;</span>,         <span class="comment">#google页面会卡住，知道页面超时后这个进程才结束</span></span><br><span class="line">    <span class="string">&#x27;http://dig.chouti.com/&#x27;</span>,          <span class="comment">#chouti页面内容会直接返回，不会等待Google页面的返回</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">pool = ThreadPoolExecutor(<span class="number">10</span>)            <span class="comment"># 创建一个线程池，最多开10个线程</span></span><br><span class="line"><span class="keyword">for</span> url <span class="keyword">in</span> url_list:</span><br><span class="line">    pool.submit(fetch_request,url)       <span class="comment"># 去线程池中获取一个线程，线程去执行fetch_request方法</span></span><br><span class="line"></span><br><span class="line">pool.shutdown(<span class="literal">True</span>)                      <span class="comment"># 主线程自己关闭，让子线程自己拿任务执行</span></span><br></pre></td></tr></table></figure>
+
+
+
 
                 
             </div>
@@ -492,7 +594,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tsblog.cn/2022/03/05/hello-world/">https://tsblog.cn/2022/03/05/hello-world/</a>
+                    <a href="https://tsblog.cn/pages/70eebd/">https://tsblog.cn/pages/70eebd/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,18 +822,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/05/hello-world/">
+                <a href="/pages/24f2db/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="03.字典">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">03.字典</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,18 +842,25 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            佟帅
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,13 +871,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pages/2270e1/">
+                <a href="/pages/34f94e/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="11.面向对象">
                         
-                        <span class="card-title">01.列表</span>
+                        <span class="card-title">11.面向对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

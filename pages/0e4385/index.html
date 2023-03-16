@@ -4,8 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 沦陷">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="09.装饰器, 沦陷">
+    <meta name="description" content="01.装饰器1.1 什么是装饰器?（What）
+装饰器本质是函数，用来给其他函数添加新的功能
+特点：不修改调用方式、不修改源代码
+
+1.2 装饰器的应用场景？（Where）
+用户认证，判断用户是否登录
+计算函数运行时间（算是一个功能、在项目">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 沦陷</title>
+    <title>09.装饰器 | 沦陷</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -279,12 +285,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">09.装饰器</h1>
                 </div>
             </div>
         </div>
@@ -405,6 +411,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python/" class="post-category">
+                                python
+                            </a>
+                        
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                python基础
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -412,7 +431,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-05
+                    2021-02-11
                 </div>
                 
 
@@ -421,14 +440,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -453,19 +472,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="01-装饰器"><a href="#01-装饰器" class="headerlink" title="01.装饰器"></a>01.装饰器</h2><h3 id="1-1-什么是装饰器-（What）"><a href="#1-1-什么是装饰器-（What）" class="headerlink" title="1.1 什么是装饰器?（What）"></a>1.1 什么是装饰器?（What）</h3><ul>
+<li><code>装饰器本质是函数，用来给其他函数添加新的功能</code></li>
+<li>特点：<code>不修改调用方式、不修改源代码</code></li>
+</ul>
+<h3 id="1-2-装饰器的应用场景？（Where）"><a href="#1-2-装饰器的应用场景？（Where）" class="headerlink" title="1.2 装饰器的应用场景？（Where）"></a>1.2 装饰器的应用场景？（Where）</h3><ul>
+<li>用户认证，判断用户是否登录</li>
+<li>计算函数运行时间（算是一个功能、在项目里用的不多）</li>
+<li>插入日志的时候</li>
+<li>redis缓存</li>
+</ul>
+<h3 id="1-3-为什么使用装饰器？（Why）"><a href="#1-3-为什么使用装饰器？（Why）" class="headerlink" title="1.3 为什么使用装饰器？（Why）"></a>1.3 为什么使用装饰器？（Why）</h3><ul>
+<li>结合应用场景说需求</li>
+</ul>
+<h3 id="1-4-如何使用装饰器？（How）"><a href="#1-4-如何使用装饰器？（How）" class="headerlink" title="1.4 如何使用装饰器？（How）"></a>1.4 如何使用装饰器？（How）</h3><h4 id="1-4-1-装饰器求函数运行时间"><a href="#1-4-1-装饰器求函数运行时间" class="headerlink" title="1.4.1 装饰器求函数运行时间"></a>1.4.1 装饰器求函数运行时间</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">timer</span>(<span class="params">func</span>):   <span class="comment">#timer(test1)  func=test1</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deco</span>(<span class="params">*args,**kwargs</span>):</span><br><span class="line">        start_time = time.time()</span><br><span class="line">        func(*args,**kwargs)      <span class="comment">#run test1</span></span><br><span class="line">        stop_time = time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;running time is %s&quot;</span>%(stop_time-start_time))</span><br><span class="line">    <span class="keyword">return</span> deco</span><br><span class="line"></span><br><span class="line"><span class="meta">@timer     </span><span class="comment"># test1=timer(test1)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test1</span>():</span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;in the test1&quot;</span>)</span><br><span class="line">test1()</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="1-4-2-三级装饰器"><a href="#1-4-2-三级装饰器" class="headerlink" title="1.4.2 三级装饰器"></a>1.4.2 三级装饰器</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auth</span>(<span class="params">auth_type</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;auth func:&quot;</span>,auth_type)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">outer_wrapper</span>(<span class="params">func</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args, **kwargs</span>):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;wrapper func args:&quot;</span>, *args, **kwargs)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;运行前&#x27;</span>)</span><br><span class="line">            func(*args, **kwargs)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;运行后&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> wrapper</span><br><span class="line">    <span class="keyword">return</span> outer_wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@auth(<span class="params">auth_type=<span class="string">&quot;local&quot;</span></span>) </span><span class="comment"># home = wrapper()</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">home</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;welcome to home  page&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;from home&quot;</span></span><br><span class="line">home()</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-装饰器在项目中应用场景"><a href="#1-5-装饰器在项目中应用场景" class="headerlink" title="1.5 装饰器在项目中应用场景"></a>1.5 装饰器在项目中应用场景</h3><ul>
+<li><code>身份验证</code></li>
+<li>写入日志</li>
+<li>redis缓存</li>
+</ul>
+<h4 id="1-5-1-身份验证"><a href="#1-5-1-身份验证" class="headerlink" title="1.5.1 身份验证"></a>1.5.1 身份验证</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">user,passwd = <span class="string">&#x27;aaa&#x27;</span>,<span class="string">&#x27;123&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auth</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">username,password,*args,**kwargs</span>):</span><br><span class="line">        <span class="keyword">if</span> user == username <span class="keyword">and</span> password == passwd:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;User has passed authentication&quot;</span>)</span><br><span class="line">            res = func(username,password,*args,**kwargs)   <span class="comment">#这里执行func()相当于执行调用的函数如home()</span></span><br><span class="line">            <span class="keyword">return</span> res          <span class="comment">#为了获得home()函数返回值，可以将执行结果赋值给res然后返回print(home())结果是&quot;from home&quot;而不是&quot;None&quot;了</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">&quot;非合法用户&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@auth</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">home</span>(<span class="params">username,password</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;welcome to home page&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;from home&quot;</span></span><br><span class="line"></span><br><span class="line">home(<span class="string">&#x27;aaa&#x27;</span>,<span class="string">&#x27;123&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="1-5-2-记录日志"><a href="#1-5-2-记录日志" class="headerlink" title="1.5.2 记录日志"></a>1.5.2 记录日志</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decoratore</span>(<span class="params">func</span>):</span><br><span class="line"><span class="meta">    @wraps(<span class="params">func</span>)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">*args,**kwargs</span>):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;当前运行方法&quot;</span>,func.__name__)</span><br><span class="line">            <span class="keyword">return</span> func(*args,**kwargs)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(traceback.format_exc())  <span class="comment"># 这里应该调用log模块来记录到日志里</span></span><br><span class="line">    <span class="keyword">return</span> log</span><br><span class="line"></span><br><span class="line"><span class="meta">@decoratore</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>():</span><br><span class="line">    <span class="built_in">int</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    test()</span><br><span class="line">    </span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; 上面运行结果</span></span><br><span class="line"><span class="string">    当前运行方法 test</span></span><br><span class="line"><span class="string">    Traceback (most recent call last):</span></span><br><span class="line"><span class="string">      File &quot;C:/Users/tom/Desktop/alipay_demo/aaa/t2.py&quot;, line 11, in log</span></span><br><span class="line"><span class="string">        return func(*args,**kwargs)</span></span><br><span class="line"><span class="string">      File &quot;C:/Users/tom/Desktop/alipay_demo/aaa/t2.py&quot;, line 18, in test</span></span><br><span class="line"><span class="string">        int(&#x27;a&#x27;)</span></span><br><span class="line"><span class="string">    ValueError: invalid literal for int() with base 10: &#x27;a&#x27;</span></span><br><span class="line"><span class="string">     22222</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="1-5-3-redis缓存"><a href="#1-5-3-redis缓存" class="headerlink" title="1.5.3 redis缓存"></a>1.5.3 redis缓存</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步：查询redis缓存是否存在这个key</span><br><span class="line">第二步：如果存在这个key，不用去mysql中查询，直接从redis中取出数据即可（减轻了mysql压力）</span><br><span class="line">第三步：如果查询的key不存在，先到mysql中查询数据，让后设置到redis中，下次查询就有了</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-5-3-1-2B青年实现"><a href="#1-5-3-1-2B青年实现" class="headerlink" title="1.5.3.1 2B青年实现"></a>1.5.3.1 2B青年实现</h5><ul>
+<li>2B青年每一个需要使用缓存的数据，我都写一个方法获取数据，再写一个方法处理缓存。</li>
+<li>若需要用到缓存的地方越来越多，每一个都需要这么写一套代码，代码冗余繁琐。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"><span class="keyword">from</span> django.core.cache <span class="keyword">import</span> cache</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取readed缓存</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_readed_cache</span>():</span><br><span class="line">    <span class="comment"># 判断键是否存在</span></span><br><span class="line">    key = <span class="string">&#x27;readed&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> cache.has_key(key):</span><br><span class="line">        data = cache.get(key)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 不存在，则通过sql语句获取数据，并写入缓存,这里只是一个举例的sql语句</span></span><br><span class="line">        data = <span class="string">&quot;select name from tb&quot;</span></span><br><span class="line">        <span class="comment"># 写入缓存</span></span><br><span class="line">        cache.<span class="built_in">set</span>(key, data, <span class="number">3600</span> - <span class="built_in">int</span>(time.time() % <span class="number">3600</span>))</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test1</span>():</span><br><span class="line">    data = get_readed_cache()</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test2</span>():</span><br><span class="line">    data = get_readed_cache()</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    test1()</span><br><span class="line">    test2()</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-5-3-2-NB青年"><a href="#1-5-3-2-NB青年" class="headerlink" title="1.5.3.2 NB青年"></a>1.5.3.2 NB青年</h5><ul>
+<li>NB青年可以使用三级装饰器，在装饰器中判断key如果存在就从reids中获取，如果不存在就从数据库查询，并设置到reids中</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"><span class="keyword">from</span> django.core.cache <span class="keyword">import</span> cache</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取redis缓存的装饰器</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">redis_cache</span>(<span class="params">key, timeout</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__redis_cache</span>(<span class="params">func</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">warpper</span>(<span class="params">*args, **kw</span>):</span><br><span class="line">            <span class="keyword">if</span> cache.has_key(key):  <span class="comment"># 判断缓存是否存在</span></span><br><span class="line">                data = cache.get(key)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="comment"># 若不存在则执行获取数据的方法</span></span><br><span class="line">                <span class="comment"># 注意返回数据的类型(字符串，数字，字典，列表均可)</span></span><br><span class="line">                data = func(*args, **kw)   <span class="comment"># 从数据库查询到数据设置到redis中</span></span><br><span class="line">                cache.<span class="built_in">set</span>(key, data, timeout)</span><br><span class="line">            <span class="keyword">return</span> data</span><br><span class="line">        <span class="keyword">return</span> warpper</span><br><span class="line">    <span class="keyword">return</span> __redis_cache</span><br><span class="line"></span><br><span class="line"><span class="comment">#键值为test，超时时间为60秒</span></span><br><span class="line"><span class="meta">@redis_cache(<span class="params"><span class="string">&#x27;test&#x27;</span>, <span class="number">60</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_test_data</span>():</span><br><span class="line">    <span class="comment"># 获取Blog模型随机排序前3条数据</span></span><br><span class="line">    <span class="comment"># (Blog模型是我自己的模型，具体代码根据自己需求获取数据)</span></span><br><span class="line">    <span class="comment"># values执行结果，将返回一个字典。字典可以直接存入redis</span></span><br><span class="line">    <span class="comment"># data = Blog.objects.values(&#x27;id&#x27;, &#x27;caption&#x27;).order_by(&#x27;?&#x27;)[:3]</span></span><br><span class="line">    data = <span class="string">&#x27;从数据库查询到了数据&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    get_test_data()</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -492,7 +537,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tsblog.cn/2022/03/05/hello-world/">https://tsblog.cn/2022/03/05/hello-world/</a>
+                    <a href="https://tsblog.cn/pages/0e4385/">https://tsblog.cn/pages/0e4385/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,18 +765,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/05/hello-world/">
+                <a href="/pages/34f94e/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="11.面向对象">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">11.面向对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,18 +785,25 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            佟帅
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            <a href="/categories/python/python%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    python基础
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,13 +814,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pages/2270e1/">
+                <a href="/pages/ff07de/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="01.列表">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="14.上下文管理">
                         
-                        <span class="card-title">01.列表</span>
+                        <span class="card-title">14.上下文管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
